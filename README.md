@@ -32,6 +32,4 @@ Sobre os parâmetros do comando:
 > <strong style="color:#ef233c;">--rm</strong> apaga containers antigos
 > <br> **--volume "/home/your_user/react-project:/app"** realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
 
-<div style="width: 100%;>
-    <img src="animated.svg" style="width: 100%;" alt="Click to see the source">
-</div>
+![Image alt text](animated.svg)
