@@ -31,7 +31,7 @@ Sobre os parâmetros do comando:
 
 > [!NOTE]
 >
-> - **--rm** apaga containers antigos
+> - **--rm** `#ef233c` apaga containers antigos
 >
 > **--volume "/home/your_user/react-project:/app"** realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
 > <br> **--workdir "/app"** diretório inicial quando o container é iniciado.
