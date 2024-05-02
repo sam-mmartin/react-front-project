@@ -9,7 +9,7 @@ as seguinte ferramentas:
 
 - [Git](https://git-scm.com)
 - [Docker](https://docker.com)
-- [VsCode](https://code.visualstudio.com/)
+- [VS Code](https://code.visualstudio.com/)
 - [wsl2](https://learn.microsoft.com/pt-br/windows/wsl/install)
 
 ### Criando a imagem base
@@ -24,3 +24,10 @@ $ cd react-project
 $ docker run --rm --volume "/home/your_user/react-project:/app" --workdir "/app"
 $ --publish 3000:3000 -it node:22 bash
 ```
+
+Com este comando nós iremos executar um container baseado na imagem node:22, e nos conectaremos neste container via terminal.
+
+Sobre os parâmetros do comando:
+
+> **--rm** apaga containers antigos
+> <br> **--volume "/home/your_user/react-project:/app"** realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
