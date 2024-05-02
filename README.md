@@ -31,7 +31,7 @@ Sobre os parâmetros do comando:
 
 > [!NOTE]
 >
-> - `--rm` apaga containers antigos
+> `--rm` apaga containers antigos
 >
 > `--volume "/home/your_user/react-project:/app"` realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
 >
@@ -40,3 +40,41 @@ Sobre os parâmetros do comando:
 > `--publish 3000:3000` mapeia a porta 3000 do host para a porta 3000 do aplicativo.
 >
 > `-it` link entre o terminal do computador com o output do container
+
+Agora que estamos conectado ao container, podemos inicilizar o projeto.
+
+```bash
+$ npm init -y
+```
+
+Agora vamos instalar o react e next
+
+```bash
+$ npm install next@latest react@latest react-dom@latest
+```
+
+> [!IMPORTANT]
+>
+> Aqui há algo muito importante de mencionar. As instalações que você faz quando está conectado ao container serão perdidas quando o container for reiniciado.
+>
+> Porém as instalações feitas aqui são compartilhadas com o ambiente local. Ou seja, tudo que for criado dentro do container não será perdido.
+
+Antes de iniciar o desenvolvimento, precisamos nos atentar que vários arquivos foram criados por dentro do container e talvez tenhamos que alterar o Owner das pastas e arquivos.
+
+Vamos executar este comando no ambiente local:
+
+```bash
+$ sudo chown -R <USERNAME> /home/your_user/react-project/
+```
+
+Agora podemos criar nossa imagem base executando os comandos a seguir:
+
+```bash
+$ docker build -t <NOME_DA_IMAGEM> .
+# Agora podemos executar o container com nosso projeto
+$ docker run -dp 3000:3000 <NOME_DA_IMAGEM>
+```
+
+> [!NOTE]
+>
+> `-dp` executa o container em segundo plano, mapeia a porta 3000 do host para a porta 3000 do aplicativo.
