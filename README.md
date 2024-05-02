@@ -29,5 +29,5 @@ Com este comando nós iremos executar um container baseado na imagem node:22, e 
 
 Sobre os parâmetros do comando:
 
-> **--rm** apaga containers antigos
+> <strong style="color:#ef233c">--rm</strong> apaga containers antigos
 > <br> **--volume "/home/your_user/react-project:/app"** realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
