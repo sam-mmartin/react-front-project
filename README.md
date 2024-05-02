@@ -29,10 +29,11 @@ Com este comando nós iremos executar um container baseado na imagem node:22, e 
 
 Sobre os parâmetros do comando:
 
-> [!TIP]
+> [!NOTE]
 >
-> **--rm** apaga containers antigos
-> <br> **--volume "/home/your_user/react-project:/app"** realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
+> - **--rm** apaga containers antigos
+>
+> **--volume "/home/your_user/react-project:/app"** realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
 > <br> **--workdir "/app"** diretório inicial quando o container é iniciado.
 > <br> **--publish 3000:3000** mapeia a porta 3000 do host para a porta 3000 do aplicativo.
 > <br> **-it** link entre o terminal do computador com o output do container
