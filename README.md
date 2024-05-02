@@ -31,9 +31,12 @@ Sobre os parâmetros do comando:
 
 > [!NOTE]
 >
-> - `**--rm**` apaga containers antigos
+> - `--rm` apaga containers antigos
 >
-> **--volume "/home/your_user/react-project:/app"** realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
-> <br> **--workdir "/app"** diretório inicial quando o container é iniciado.
-> <br> **--publish 3000:3000** mapeia a porta 3000 do host para a porta 3000 do aplicativo.
-> <br> **-it** link entre o terminal do computador com o output do container
+> `--volume "/home/your_user/react-project:/app"` realiza um link entre a pasta local do projeto com a pasta da aplicação dentro do container.
+>
+> `--workdir "/app"` diretório inicial quando o container é iniciado.
+>
+> `--publish 3000:3000` mapeia a porta 3000 do host para a porta 3000 do aplicativo.
+>
+> `-it` link entre o terminal do computador com o output do container
