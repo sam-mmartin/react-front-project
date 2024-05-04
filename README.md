@@ -1,16 +1,16 @@
 # Project Frontend React-NextJS
 
-## Projeto frontend do site em React utilizando NextJS
+## Projeto frontend do site em React
 
 ### Pré-requisitos
 
 Antes de começar você vai precisar ter instalado na sua máquina
 as seguinte ferramentas:
 
-- [Git](https://git-scm.com)
-- [Docker](https://docker.com)
-- [VS Code](https://code.visualstudio.com/)
-- [wsl2](https://learn.microsoft.com/pt-br/windows/wsl/install)
+-   [Git](https://git-scm.com)
+-   [Docker](https://docker.com)
+-   [VS Code](https://code.visualstudio.com/)
+-   [wsl2](https://learn.microsoft.com/pt-br/windows/wsl/install)
 
 ### Criando a imagem base
 
