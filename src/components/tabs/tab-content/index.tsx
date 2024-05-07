@@ -1,58 +1,22 @@
 import React from 'react';
-import CardBackground from '../../card/card-background';
+import CardBackground from '../../card/card-language';
 import ListUnstyled from '../../ul-list/list-unstyled';
-import TabContentProps from '../models/tab-content-props';
+import Languages from '../../../models/languages';
 
-const TabContent = (props: TabContentProps) => {
+const TabContent = ({languages}: {languages: Languages[]}) => {
     return (
         <div className="tab-content tab-space">
             <div className="tab-pane active work" id="work">
                 <div className="row">
                     <div className="col-md-8 ml-auto mr-auto">
                         <div className="row collections">
-                            {props.languagesList.map((item) => {
+                            {languages.map((item) => {
                                 return (
-                                    <div key={item.title} className="col-md-4">
+                                    <div key={item.name} className="col-md-4">
                                         <CardBackground {...item} />
                                     </div>
                                 );
                             })}
-
-                            <div className="col-md-4">
-                                <div className="card card-background">
-                                    <a href="#pablo"></a>
-                                    <div className="card-body">
-                                        <label className="badge badge-info">Spring 2016</label>
-                                        <a href="#pablo">
-                                            <h2 className="card-title">High Heels</h2>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-md-4">
-                                <div className="card card-background">
-                                    <a href="#pablo"></a>
-                                    <div className="card-body">
-                                        <label className="badge badge-danger">Summer 2016</label>
-                                        <a href="#pablo">
-                                            <h2 className="card-title">Flats</h2>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-md-4">
-                                <div className="card card-background">
-                                    <a href="#pablo"></a>
-                                    <div className="card-body">
-                                        <label className="badge badge-success">Winter 2015</label>
-                                        <a href="#pablo">
-                                            <h2 className="card-title">Men&apos;s Sneakers</h2>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 

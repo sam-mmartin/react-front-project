@@ -1,0 +1,13 @@
+version: '2.27'
+
+services:
+  app:
+    container_name: front-react
+    image: app-dev
+    build:
+      context: ./
+      target: development
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app

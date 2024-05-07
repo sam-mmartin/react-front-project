@@ -1,36 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Profile from '../profile';
 import ButtonFollow from '../button-follow';
 import DescriptionCenter from '../description';
 import TabNav from '../tabs/tab-nav';
 import TabContent from '../tabs/tab-content';
-import TabContentProps from '../tabs/models/tab-content-props';
+import Languages from '../../models/languages';
+import http from '../../config/http';
+import User from '../../models/user';
 
 const Section = () => {
-    const tabContentProps: TabContentProps = {
-        languagesList: [
-            {
-                id: '1',
-                title: 'C',
-                label: 'Agosto 2014',
-                imageSrc: '/static/img/developer/c-language.jpg',
-            },
-        ],
-    };
+    const [user, setUser] = useState<User>({} as User);
+    const [languages, setLanguages] = useState<Languages[]>([]);
+
+    useEffect(() => {
+        http.get<User>('users/name/Sam M. Martin').then((res) => {
+            setUser(res.data);
+        });
+
+        http.get<Languages[]>('languages').then((res) => {
+            setLanguages(res.data);
+        });
+    }, []);
+
     return (
         <div className="main main-raised">
             <div className="profile-content">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 ml-auto mr-auto">
-                            <Profile />
+                            <Profile user={user} />
                             <ButtonFollow />
                         </div>
                     </div>
 
                     <DescriptionCenter />
                     <TabNav />
-                    <TabContent {...tabContentProps} />
+                    <TabContent languages={languages} />
                 </div>
             </div>
         </div>

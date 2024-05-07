@@ -4,5 +4,4 @@ module.exports = {
     singleQuote: true,
     printWidth: 120,
     tabWidth: 4,
-    trim_trailing_whitespace = true
 };

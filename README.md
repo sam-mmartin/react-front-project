@@ -21,8 +21,7 @@ $ mkdir react-project
 # Acessamos a pasta
 $ cd react-project
 # Execute o seguinte comando
-$ docker run --rm --volume "/home/your_user/react-project:/app" --workdir "/app"
-$ --publish 3000:3000 -it node:22 bash
+$ docker run --rm --volume "/home/your_user/react-project:/app" --workdir "/app" --publish 3000:3000 -it node:22 bash
 ```
 
 Com este comando nós iremos executar um container baseado na imagem node:22, e nos conectaremos neste container via terminal.
@@ -47,10 +46,10 @@ Agora que estamos conectado ao container, podemos inicilizar o projeto.
 $ npm init -y
 ```
 
-Agora vamos instalar o react e next
+Agora vamos instalar o react
 
 ```bash
-$ npm install next@latest react@latest react-dom@latest
+$ npm install react@latest react-dom@latest
 ```
 
 > [!IMPORTANT]
